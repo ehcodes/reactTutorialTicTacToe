@@ -1,10 +1,14 @@
 import React, { StrictMode } from "react";
+
+import { useState } from "react";
+
 // had to stray from the tutorial instructions, added a div instead of fragments to get around a compiling error
 // used a class name of boardRow instead of the original board-row
-function Square ({ value }){
-  
+function Square (){
+  const [value, setValue] = useState(null);
+
   function handleClick(){
-    console.log(`Clicked! ${value}`);
+    setValue('X');
   }
 
   return <button className="square" onClick={handleClick}>{value}</button> 
@@ -13,19 +17,19 @@ export default function Board() {
   return (
     <div>
       <div className="boardRow">
-        <Square value="1"/>
-        <Square value="2"/>
-        <Square value="3"/>
+        <Square />
+        <Square />
+        <Square />
       </div>
       <div className="boardRow">
-        <Square value="4"/>
-        <Square value="5"/>
-        <Square value="6"/>
+        <Square />
+        <Square />
+        <Square />
       </div>
       <div className="boardRow">
-        <Square value="7"/>
-        <Square value="8"/>
-        <Square value="9"/>
+        <Square />
+        <Square />
+        <Square />
       </div>
     </div>
   );
