@@ -1,5 +1,4 @@
-import React, { StrictMode } from "react";
-
+import React from "react";
 import { useState } from "react";
 
 // had to stray from the tutorial instructions, added a div instead of fragments to get around a compiling error
