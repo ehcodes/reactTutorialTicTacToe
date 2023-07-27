@@ -14,7 +14,7 @@ function Square (){
 }
 export default function Board() {
   return (
-    <div>
+    <>
       <div className="boardRow">
         <Square />
         <Square />
@@ -30,6 +30,6 @@ export default function Board() {
         <Square />
         <Square />
       </div>
-    </div>
+    </>
   );
 }
